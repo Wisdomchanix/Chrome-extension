@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: linear-gradient(135deg, #e0f7fa, #e1bee7);
+    --input-field-color: #ffffff;
+    --save-button-color: #4a90e2;
+    --save-button-color-alt: #357abd;
+    --delete-button-color: #ff6b6b;
+    --delete-button-color-alt: #d9534f;
+    --addnote-button-color: #a5d6a7;
+    --addnote-button-color-alt: #81c784;
+    --text-modal-color: #f3e5f5;
+    --text-color: #333333;
+    --body-font: 'Open Sans', sans-serif;
+    --title-font: 'Raleway', sans-serif;
+    --text-color-alt: #000000;
+}
+
+/* DARK THEME */
+
+body.dark-theme {
+    --background-color: linear-gradient(135deg, #1c1c1c, #797979);
+    ;
+    --input-field-color: #333333;
+    --save-button-color: #00bcd4;
+    --save-button-color-alt: #0097a7;
+    --delete-button-color: #e57373;
+    --delete-button-color-alt: #c62828;
+    --addnote-button-color: #81c784;
+    --addnote-button-color-alt: #388e3c;
+    --text-modal-color: #2e2e2e;
+    --text-color: #e0e0e0;
+    --text-color-alt: #f8f1f1;
+}
+
+.nav_dark{
+    padding: 5px;
+}
+.change-theme {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+.dark-theme .lead_input {
+    filter: drop-shadow(0 12px 8px rgb(0, 0, 0));
+    color: white;
+}
+
+.dark-theme .lead_input::placeholder{
+    color: whitesmoke;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.parent {
+    color: var(--text-color);
+    backdrop-filter: blur(50px);
+    background: rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: .5rem;
+}
+
+.lead_input {
+    padding: 15px;
+    width: 100%;
+    background-color: var(--input-field-color);
+    border: 1px solid #cccccc;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: .3rem;
+    filter: drop-shadow(0 12px 8px rgb(128, 127, 127));
+    font: var(--body-font);
+    outline: none;
+}
+
+.save_btn {
+    margin-top: 20px;
+    padding: 10px;
+    /* text-transform: uppercase; */
+    color: var(--text-color);
+    background-color: var(--save-button-color);
+    border: none;
+    border-radius: .5rem;
+    /* border: 1px solid #5f9341; */
+    font-weight: 900;
+    font: var(--title-font);
+}
+
+.save_btn:hover {
+    background-color: var(--save-button-color-alt);
+    color: #000000;
+
+}
+
+.delete_btn {
+    background-color: var(--delete-button-color);
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.delete_btn:hover {
+    background-color: var(--delete-button-color-alt);
+    --text-color: #8a8a8a;
+}
+
+body {
+    padding: 4em;
+    min-width: 400px;
+    background: var(--background-color);
+    height: 100vh;
+}
+
+
+ul {
+    padding-bottom: 1em;
+}
+
+li {
+    /* list-style: none; */
+    margin-top: 5px;
+    font: var(--body-font);
+}
+
+a {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: 600;
+    /* text-transform: capitalize; */
+    /* font: var(--title-font); */
+}
+
+a:hover {
+    color: var(--text-color-alt);
+}
+
+.note_input{
+    display: none;
+    outline: none;
+    /* margin-left: 10px; */
+}
+
+.note_icon{
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.note_text{
+    padding: 10px 20px 10px 20px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: .5rem;
+}
+
+.save_note-btn{
+    margin-top: 5px;
+    padding: 9px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    background-color: var(--addnote-button-color);
+    border: none;
+    border-radius: .5rem;
+    /* border: 1px solid #5f9341; */
+    font-weight: 900;
+    font: var(--title-font);
+    transition: .2s;
+}
+
+.save_note-btn:hover{
+    background-color: var(--addnote-button-color-alt);
+}
